@@ -111,20 +111,20 @@ project(':forge') {
     sourceSets {
         fmllauncher {
             java {
-                srcDir "$rootDir/src/fmllauncher/java"
+                srcDir "$rootDir/projects/forge/fmllauncher/java"
             }
             resources {
-                srcDir "$rootDir/src/fmllauncher/resources"
+                srcDir "$rootDir/projects/forge/fmllauncher/resources"
             }
         }
         main {
             compileClasspath += sourceSets.fmllauncher.runtimeClasspath
             runtimeClasspath += sourceSets.fmllauncher.runtimeClasspath
             java {
-                srcDir "$rootDir/src/main/java"
+                srcDir "$rootDir/projects/forge/java"
             }
             resources {
-                srcDir "$rootDir/src/main/resources"
+                srcDir "$rootDir/projects/forge/resources"
             }
         }
         test {
@@ -132,10 +132,10 @@ project(':forge') {
             runtimeClasspath += sourceSets.fmllauncher.runtimeClasspath
             java {
                 // srcDir "$rootDir/src/test/java" TODO fix later
-                srcDir "$rootDir/src/fmllaunchertest/java"
+                srcDir "$rootDir/projects/forge/fmllaunchertest/java"
             }
             resources {
-                srcDir "$rootDir/src/test/resources"
+                srcDir "$rootDir/projects/forge/test/resources"
             }
         }
         userdev {
